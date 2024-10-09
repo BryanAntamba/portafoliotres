@@ -5,40 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
+    <!--la etiqueta link nos ayudara enlazar los archivos scc de la carpeta estilos de HTML-->
+    <!--rel="stylesheet" indica que el archivo vinculado es un CSS-->
+    <!--href="estilos/main.css" se refiere que el archivo base.css que se desea integrar en la pagina se encuentra en la carpeta estilos-->
+    <!--Los 3 link estan diciendo que el archivo css se implementara en la pagina web donde esta ubicado en la carpeta estilos los archivos css-->
     <link rel="stylesheet" href="estilos/base.css">
     <link rel="stylesheet" href="estilos/main.css">
     <link rel="stylesheet" href="estilos/vendor.css">
+    <!--rel="stylesheet" especifica que el archivo vinculado es un CSS-->
+    <!--href="estilos/font-awesome/css/fontawesome-all.css" se refiere que la ruta de la carpeta CSS que se vincula
+    al "fontawesome-all.css" contiene los ESTILOS para usar los íconos de Font Awesome-->
+    <!--El archivo font-awesome esta ubicada dentro de una subcarpeta (estilos/font-awesome/css/)-->
     <link rel="stylesheet" href="estilos/font-awesome/css/fontawesome-all.css">
     <!--JavaScript
-    ===================================================-->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    =====================================================================================================-->
+    <!--La etiqueta script se utiliza para incluir un archivo JavaScript en un documento HTML-->
+    <!--src="js/modernizr.js" 
+    src especifica la ruta. El archivo modernizr.js se encuentra dentro de la carpeta js-->
+    <script src="js/modernizr.js"></script><!--Final de la etiqueta script-->
+    <!--src especifica la ruta, el cual el archivo min.js se encuentra dentro de la carpeta js-->
+    <script src="js/pace.min.js"></script><!--final del segundo script-->
 
     <!--Favicon - icono de la pestaña
-    ===================================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_portafolio_32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_protafolio16x16.png">
+    =====================================================================================================-->
+    <!--Etiqueta link especifica un ícono que aparecerá cuando los usuarios añadan una página web de un dispositivo IOS-->
+    <!--rel="apple-touch-icon" se refiere que el archivo enlazado es un ícono diseñado para ser utilizado en dispositivos IOS-->
+    <!--size="180x180" ayudara a dar las dimenciones de pixeles del icono-->
+    <!--href especifica que sera la ruta del archivo de la imagen donde sera utilizada como icono-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.jpg">
+    <!--rel="Icon" indica que el archivo sera el icono de la pagina web-->
+    <!--type="image/jpg" Indica que el archivo es una imagen en formato JPG-->
+    <!--sizes="32x32" son la dimenciones de pixeles de la imagen-->
+    <!--href especficica la ruta donde la imagen portafolio_32x332.jpg se encuentra dentro de la carpeta imagen-->
+    <link rel="icon" type="image/jpg" sizes="32x32" href="imagen/favicon_portafolio_32x32.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="imagen/favicon_protafolio16x16.jpg">
+    <!--Titulo del portafolio-->
     <title>Portafolio</title>
+    <!--Fin del head-->
 </head>
+<!--======================================================================================================-->
+<!--Inicio del body (cuerpo del HTML)-->
+<!--id asigna un identificador llamado "top" lo cual permite referirse al elemento de manera única tanto en CSS como en JavaScript-->
 
 <body id="top">
     <!--vista de carga o loading-->
+    <!--este contenedor muestra la pantalla de carga lo cual muestra el bloqueo de vista del contenido principal hasta que la carga se complete-->
     <div id="preloader">
+        <!--este otro contenedor dentro del primer contenedor representa el bloqueando de la vista del contenido principal hasta que la carga se complete-->
         <div id="loader"></div>
     </div>
-    <!--Empeazados con el header
-    ====================================================-->
+    <!--Empezando con el header
+    =======================================================================================================-->
+    <!--la aetiqueta header se usa para referirce al encabezado de la pagina, que puede incluir en su contenido los logos, titulos, menus de navegacion-->
+    <!--Se define una clase llamada "s-header" la cual se usa en CSS para aplicar estilos a este encabezado-->
     <header class="s-header">
+        <!--el contenedor div brinda que la clase "header-logo" tiene estilo css para su contenedor-->
         <div class="header-logo">
+            <!--la etiqueta "a" crea un enlace a la pagina inicial "index.html"-->
+            <!--la clase llamda "site-logo" se refiere para aplicar estilos adicionales o para scripts que se relacionen específicamente con el logotipo-->
             <a href="index.html" class="site-logo">
-                <img src="img/logo.svg" alt="Homepage">
+                <!--la etiqueta "img" se usara para mostrar la imagen del logotipo-->
+                <!--src muestra la ruta de que el logo.svg esta ubicado en la carpeta imagen-->
+                <!--alt="homepage" ayudara a proporcionar un texto alternativo que describe la imagen en caso de que el usuario no lo pueda visualizar-->
+                <img src="imagen/logo.svg" alt="Homepage">
+                <!--fin de la eetiqueta "a"-->
             </a>
+            <!--Fin del contenedor div-->
         </div>
         <!--Barra de Navegación 
-        =================================================-->
+        ===================================================================================================-->
+        <!--Inicio de la etiqueta nav-->
+        <!--Etiqueta "nav" se usa para definir una sección de navegación dentro de la página-->
+        <!--la clase="header-nav-wrap" se usara para aplicar estilos CSS al contenedor de navegación de la pagina web-->
         <nav class="header-nav-wrap">
+            <!--"ul" creamos una lista desordenada que estara compuesta por 5 listas-->
+            <!--la clase llamada "header-main-nav" permitira dar estilo CSS a la lista desordenada-->
             <ul class="header-main-nav">
+                <!--la clase "current" indica que este elemento es el activo o actualmente seleccionado-->
+                <!--El atributo href="#intro" indica que el enlace se dirige a un ID específico en la misma página-->
+                <!--la clase="smoothscroll" ayudara a aplicar un comportamiento de desplazamiento suave al hacer clic en el enlace-->
+                <!--title"intro" es un titulo alternativo cuando el usuario ponge el cursos en la introduccion se le visualice un mensaje como "intro"-->
                 <li class="current"><a href="#intro" class="smoothscroll" title="intro">Introducción</a></li>
                 <li><a href="#about" title="about" class="smoothscroll">About</a></li>
                 <li><a href="#services" title="services" class="smoothscroll">Services</a></li>
@@ -47,35 +93,59 @@
             </ul>
 
             <!--Creamos una lista desordenada para las redes sociales
-            ======================================-->
+            ==============================================================================================-->
+            <!--se desarrollara una lista desordenada "ul"-->
+            <!--se asigna una clase dentro de la etiqueta "ul" para dar estilo CSS a la lsita desordenada-->
             <ul class="header-social">
+                <!--href="#0" nos llevara a la parte de la pagina principal donde esta ubicado la red de facebook-->
+                <!--href="#0" especifica que no hay ruta para facebook-->
+                <!--la etiqueta "i" se usa para los iconos-->
+                <!--la clase "fab fa-facebook" indica que se está utilizando una fuente de íconos específicamente de Font-Awesome-->
+                <!--el atributo "aria-hidden=true" especifica que el ícono es decorativo y no debe ser leído por los lectores 
+                de pantalla para no causar un problema-->
                 <li><a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#1"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a href="#2"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                 <li><a href="#3"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <!--fin de la lista desordenada-->
             </ul>
+            <!--Fin de la etiqueta nav-->
         </nav>
         <a href="#" class="header-menu-toggle"><span>Menu</span></a>
     </header><!--fin del header-->
 
     <!--INtroduccion
-    ===============================================-->
+    ========================================================================================-->
+    <!--la etiqueta section se usa para una sección de contenido independiente dentro de la página web-->
+    <!--dentro del section esta el atributo id que se refiere  a la intro de la pagina principal cual el usuario apriete la fila desordenada
+    para ver la introduccion-->
+    <!--la clase "s-intro target-section" se usa para dar esttilo CSS-->
+    <!--s-intro es para dar estilo a la introduccion-->
     <section id="intro" class="s-intro target-section">
+        <!--abrimos un contenedor con una clase "row intro-content" para dar estilo CSS-->
         <div class="row intro-content">
+            <!--Ingreso de otro div con una clase para la columna ocupe 9 de largo y que se ocupe todo el ancho de los dispositivos mobiles-->
             <div class="column large-9 mob-full intro-text">
-                <h3>Hola, Mi nombre es Elvis Pachacama</h3>
+                <!--tamaño de letra h3, nombre de la persona-->
+                <h3>Hola, Mi nombre es Bryan Antamba</h3>
+                <!--tamaño de letra h1 alta, especialidades de la persona-->
                 <h1>
-                    Desarrollador Web <br>
-                    Desarrolladores Móviles <br>
-                    Expertos en IA
+                    Desarrollador Web <br><!--etiqueta "br" para salto de linea-->
+                    Jugador de VALORANT <br><!--salto de linea-->
+                    Expertos en natacion
                 </h1>
+                <!--final del div-->
             </div>
+            <!--ingreso de nuevo div con una clase la cual esta relacionada con la intro de la seccion de seleeccion de la lista desordenada-->
             <div class="intro-scroll">
+                <!--representa un enlace que permite a los usuarios desplazarse a una zona de la pagina web-->
                 <a href="#about" class="intro-scroll-link smoothscroll">
                     Presiona para más
                 </a>
-
+                <!--final del div-->
             </div>
+            <!--inicio de dos nuevos contenedores-->
+            <!--la clase intro grid proporciona estilo CSS igual que la otra clase intro pic-->
             <div class="intro-grid"></div>
             <div class="intro-pic"></div>
 
@@ -84,171 +154,310 @@
 
     <!--about
     ==========================================================-->
+    <!--Ingreso de etiqueta section-->
+    <!--id indica un atributo de 1 seccion-->
+    <!--la clase llamada "s-about target-section" es para dar estilo CSS-->
     <section id="about" class="s-about target-section">
+        <!--este div se usara exclusiva mente para para el contenido relacionado con la presentación personal
+        yla clase "about-me" es para dar estilo a este contenedor-->
         <div class="about-me">
+            <!--ingreso de otro contenedor donde la clase "row heading-block" especifica que las columnas se vuelva filas-->
             <div class="row heading-block">
+                <!--ingreso de otro div, especifica que toda la fila de un dispositivo ocupe toda la fila
+                y la clase "column large-full" ocupe todo el ancho completo disponible de la pagina-->
                 <div class="column large-full">
+                    <!--tamaño de letra h2 con una clase para dar estilo al titulo about me-->
                     <h2 class="section-heading">About me</h2>
                 </div>
             </div>
+            <!--Ingreso de div con una clase la cual row organiza las filas y about-me__conten para dar estilos al contenido About me-->
             <div class="row about-me__content">
+                <!--Ingreso de contenedor div dos con clase que indica que ocupe todo el ancho disponible de la pagina about-me__text
+                indicara que este div esta relacionado con el about me lo que permitira dar estilos a los parrafos con su contenido-->
                 <div class="column large-full about-me__text">
+                    <!--primer parrafo con una clase para dar estilos CSS-->
                     <p class="lead">
-                        Elvis Pachacama Cabezas es un educador y profesional con un título de tercer nivel en Ingeniería
-                        en Tecnologías de la Información,
-                        obtenido en la Universidad Estatal de Sumy en Ucrania (SUMDU) СУМДУ.
-                        Se destaca por su participación en la vida estudiantil,
-                        ya que fue representante de los estudiantes ecuatorianos
-                        en el Consejo Estudiantil de la universidad, lo que sugiere un
-                        compromiso activo con los asuntos estudiantiles.
+                        Bryan Justin Antamba Enriquez, 20 años de edad, estudiante de barios colegios, colegio
+                        presentacion
+                        , colegio upeps, instituto mejia, colegio, Terminacion de estudios en el Colegio Virtual
+                        Iberoamericano.
                     </p>
-
+                    <!--Inicio de segundo parrafo-->
                     <p>
-                        Además, Elvis se graduó con honores y recibió reconocimiento
-                        por su destacado desempeño académico en su título universitario.
-                        Esta distinción refleja su dedicación y excelencia en sus estudios.
+                        Graduado como abanderado de la Institucion Educativa perpetuo Socorro (UPEPS),por motivos de
+                        pandemia
+                        sali e ingre al Colegio Virtual Iberoamericano.
+                        Presente de titulo de graduacion de Ciencias basicas en el colegio virtual.
 
                     </p>
-                    <p>Actualmente, Elvis Pachacama Cabezas es docente en el Instituto Superior Tecnológico Quito,
-                        donde imparte cátedra en la Carrera de Desarrollo de Software.
-                        Su posición como educador indica una dedicación al campo de la enseñanza
-                        y sugiere que posee conocimientos prácticos en el desarrollo de software,
-                        que comparte con los estudiantes.</p>
-                    <p>Adicionalmente, es relevante mencionar que Elvis
-                        está próximo a cursar la maestría en inteligencia artificial
-                        en la Universidad Internacional de Valencia.
-                        Este detalle indica su interés en profundizar sus conocimientos
-                        en un campo avanzado y en constante evolución, como es la
-                        inteligencia artificial.</p>
-
+                    <!--Inicio de tercer parrafo-->
+                    <p>Encantado en el mundo de la tecnologia lo cual ingrese al ITQ para poder desarrollar paginas,
+                        programas
+                        y sistemas operativos para tener los conocimientos de la carrera del futuro.
+                    </p>
+                    <!--Inicio del cuarto parrafo-->
+                    <p>
+                        Deporte mas destacado es la natacion por buen talento desde niño asta la actualidad y compitio
+                        en dos juegos nacionales
+                        en 2022 y 2023 en guayaquil y quito club tenis.
+                    </p>
+                    <!--fin del contenedor div-->
                 </div>
-
+                <!--fin del segundo div-->
             </div>
+            <!--Inicio de nuevo contenedor div-->
+            <!--Representa la seccion de un boton llamado Hiren me-->
             <div class="row about-me__buttons">
                 <div class="column large-half tab-full">
                     <a href="#" class="btn btn--stroke full-width">Hire Me</a>
+                    <!--fin del div-->
                 </div>
+                <!--ingreso de otro contenedor div-->
+                <!--Esta linea especifica para poder descargar en el boton Download CV el curriculum de la persona Bryan Antamba-->
                 <div class="column large-half tab-full">
                     <a href="#" class="btn btn--primary full-width">Dowload CV</a>
+                    <!--Final del primer div-->
                 </div>
+                <!--final del segundo div-->
             </div>
         </div><!--End about me -->
-
+        <!--Ingreso de un nuevo contenedor div-->
+        <!--Demostracion de una parte de la pagina web sobre el proceso laboral de la persona-->
         <div class="about-experience">
             <div class="row heading-block">
                 <div class="column large-full">
                     <h2 class="section-heading">Work & Education</h2>
+                    <!--fin del div uno-->
                 </div>
+                <!--fin del div dos-->
             </div>
-
+            <!--Inicio del nuevo contenedor div-->
+            <!--la clase "row about-experience__timeline" del vid se refiere a la experiencia laboral de la persona-->
             <div class="row about-experience__timeline">
+                <!--ingreso de nuevo contenedor con la clase que permite indicar
+                 un sistema cuadricular y que ocupe la mitad del ancho de la pantalla el texto-->
                 <div class="column large-half tab-full">
+                    <!--este div con la clase permite crear un marcador en la linea del tiempo-->
                     <div class="timeline">
+                        <!--nuevo div contiene un espacio visual alrededor del ícono lo cual posiblemente es
+                        para dar efectos de estilo-->
                         <div class="timeline_icon-wrap">
-                            <span class="timeline_icon timeline_icon--work"></span>
+                            <!--span esta etiqueta indica la representacion de la linea del tiempo-->
+                            <!--la clase indica que el inoco se representa mediante una imagen lo cual represente
+                            al proceso elaboran de la persona que se dedica-->
+                            <span class="timeline_icon timeline_icon--work"></span> <!--Fin del span-->
+                            <!--Fin del contenedor-->
                         </div>
+                        <!--Este div incluye en su contenido la entrada de la linea del tiempo la cual esta relacionada
+                        al trabajo laboral-->
                         <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
+                            <!--Este div servira para crear un marcador-->
+                            <div class="timeline__bullet"></div><!--Fin del div del marcador-->
+                            <!--Este div tendra el encabezado de la linea del tiempo-->
                             <div class="timeline__header">
-                                <p class="timeline__timeframe">May 2020 - Present</p>
-                                <h3 class="item-tittle">Instituto Tecnológico Quito</h3>
-                                <h5>Teacher</h5>
+                                <!--Este parrafo indica que la clase muestre el encabezado el cual se meustra la fecha y año presente
+                                el cual se realizo el primer trabajo laboral-->
+                                <p class="timeline__timeframe">marzo 2021 - Present</p>
+                                <!--tamaño h3 de las letras con una clase la cual muestre como titulo de la empresa donde se trabajo
+                                y que puesto se le asigno-->
+                                <h3 class="item-title">Fruteria Familiar</h3>
+                                <h5>Cajero</h5>
+                                <!--Final div-->
                             </div>
+                            <!--Nuevo contenedor div-->
+                            <!--este contenedor indica una parte de la linea del tiempo-->
                             <div class="timeline__desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat nemo non
-                                    laudantium optio
-                                    corrupti nulla, tenetur placeat dolores inventore explicabo veniam ratione iure sit.
-                                    Consectetur, quae quasi! Veniam, earum.</p>
+                                <!--ingreso de parrafo-->
+                                <p>
+                                    Familiar asigno invitacion para trabajar en su empresa como cajero de la fruteria
+                                    ubicada en miraflores
+                                    con ventas de todo tipo de frutas y verduras traidos de sus cultivos de caluma
+                                    (guayaquil).
+                                </p> <!--Fin parrafo-->
+                                <!--Fin del primer div-->
                             </div>
+                            <!--Final del div dos-->
                         </div>
+                        <!--Este apartado mostrara los eventos relacionados a la liena del tiempo de la experiencia laboral-->
                         <div class="timeline__block">
                             <div class="timeline__bullet">
                                 <div class="timeline__header">
-                                    <p class="timeline__timeframe">July 2017 - May 2020</p>
-                                    <h3 class="item-title">MB3</h3>
-                                    <h5>Frontend Developer</h5>
+                                    <!--Este parrafo mostrara la fecha del siguiente trabajo de la linea del tiempo-->
+                                    <p class="timeline__timeframe">mayo 10 - julio 2021</p>
+                                    <!--tamaño h3 del titulo la cual se visualizara por encima de la fecha-->
+                                    <h3 class="item-title">Negocio de Empanadas de Morocho</h3>
+                                    <!--Tamaño de letra h5 pequeña de posicio nde trabajo asignado-->
+                                    <h5>Diseño de Publicidad</h5>
+                                    <!--Fin del div-->
                                 </div>
+                                <!--Ingreso de nuevo contenedor div para indicacion de parrafo de la descripcion del siguiente trabajo
+                                laboral de la persona-->
                                 <div class="timeline__desc">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus repellendus
-                                        suscipit alias
-                                        debitis ipsum velit quidem! Quod, delectus necessitatibus. Excepturi sit facilis
-                                        provident
-                                        consequuntur, eos laudantium in sed nemo voluptate.</p>
+                                    <!--Ingreso de nuevo parrafo de la descripcion-->
+                                    <p>
+                                        Negocio de mi madre de realizar vendas de empanadas de morocho con entregas a
+                                        domicilio, fui destinado
+                                        para diseñar piblicidad llamativa para los clientes a que compren el producto
+                                        con las mejores ofertas y precios.
+                                        <!--Fin del parrafo-->
+                                    </p>
+                                    <!--Fin del div uno-->
                                 </div>
+                                <!--Fin del segundo div-->
                             </div>
-
+                            <!--Fin del tercer div-->
                         </div>
+                        <!--Siguiente entrada de la otra parte de la linea del tiempo laboral-->
                         <div class="timeline__block">
                             <div class="timeline__bullet"></div>
                             <div class="timeline__header">
-                                <p class="timeline__timeframe">March 2016 - June 2017</p>
-                                <h3 class="item-title">Epic Design Studio</h3>
-                                <h5>Frontend Developer</h5>
+                                <!--parrafo con demostracion de la fecha y el año que se culmino el trabajo laboral de la
+                                linea del tiempo-->
+                                <p class="timeline__timeframe">febrero2023 - Actual</p>
+                                <h3 class="item-title">BTS</h3>
+                                <h5>Publicista, diseñador</h5>
+                                <!--Fin del Div-->
                             </div>
+                            <!--Ingreso de nuevo contenido con el contenedor div para el siguiente tema de la linea del tiempo
+                            del trabajo laborar-->
                             <div class="timeline__desc">
-                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi
-                                    cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident
-                                    cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est
-                                    occaecat nisi.</p>
+                                <!--Ingreso del parrafo-->
+                                <p>
+                                    Trabajador actual del negocio de mi madre tratado de BTS (banda coreana de del mundo
+                                    BKPOP)
+                                    encargado de dar publicidad a las redes y diseñando las fotos para las publicaciones
+                                    de las redes
+                                    para llamar la atencion de los clientes a comprar sudaderas, camisetas basadas en la
+                                    banda Coreana.
+                                    <!--Finalizacion del parrafo-->
+                                </p>
+                                <!--Fin del div uno-->
                             </div>
+                            <!--Fin del div dos-->
                         </div>
+                        <!--Fin del div tres-->
                     </div>
+                    <!--Fin de div cuatro-->
                 </div>
-
-                <div class="column large-half tab-full">
-                    <div class="timeline">
-                        <div class="timeline__icon-wrap">
-                            <span class="timeline__icon timeline_icon--education"></span>
+                <!--El div esta diseñado con la clase para dar estilo CSS-->
+                <!--Esate apartado mostrara la estructura para mostrar un ítem o evento en una línea de tiempo--->
+                <!--Sección de servicios o habilidades, con un tema oscuro y un objetivo para navegación-->
+                <section id="services" class="s-services ss-dark target-section">
+                    <!--Superposición de sombra para efectos visuales para la sección-->
+                    <div class="shadow-overlay"></div>
+                    <!--Fila para el bloque y centrado de un texto-->
+                    <div class="row heading-block heading*block--center">
+                        <!--Columna que ocupa todo el ancho de la la pagina-->
+                        <div class="column large-full">
+                            <!--Título principal de la sección con un estilo centrado hacia la parte inferior-->
+                            <h2 class="section-heading section-heading--centerbottom">Lectura</h2>
+                            <!--Descripción de la sección del enfoque-->
+                            <p class="section-desc">
+                                Leer libro y novelas virtuales amplia mi conocmimiento para poder sacar probecho a mi
+                                profecion
+                                que estoy siguiento, en este caso Desarrollo de Software.
+                                <!--Fin del Parrafo-->
+                            </p>
+                            <!--Fin del div-->
                         </div>
-                        <div class="timeline__block"> </div>
-                        <div class="timeline__bullet">
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">April 2025 - April 2026 </p>
-                                <h3 class="item-title">
-                                    Valencia International University
-                                </h3>
-                                <h5>Master Degree</h5>
+                    </div><!--end heading-block-->
+                    <!-- Fila para la lista de servicios, adaptada a diferentes tamaños de pantalla -->
+                    <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+                        <!--Primer servicio: Desarrollo web-->
+                        <div class="column item-service">
+                            <div class="item-service__content">
+                                <!--Título del servicio el cual se esta realizando-->
+                                <h4 class="item-title">Desarrollo web</h4>
+                                <p>
+                                    Especialista en HTML, CSS, y java script con enfoques bien dictados y estructuras de
+                                    codigo
+                                    bien procesadas y creadas
+                                </p>
+
+                                <a href="https://eva.itq.edu.ec/course/view.php?id=3323"> Introducción de Desarrollo Web
+                                </a>
+                                <!--Fin del primer div-->
                             </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus odit, quidem asperiores, quasi officiis nihil 
-                                    consequatur recusandae ex veniam ratione temporibus quam commodi error! Tenetur et quam ab delectus magni.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline_header">
-                                <p class="timeline__timeframe">November 2012 - May 2017</p>
-                                <h3 class="item-title">Sumy State University</h3>
-                                <h5>Bachelor Degree</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente minus alias ea fuga? Voluptatem veniam cupiditate,
-                                     blanditiis soluta, amet aspernatur excepturi beatae, fugiat deserunt illo harum animi debitis quam. Voluptatem.</p>
-                            </div>
+                            <!--Fin del segundo div-->
                         </div>
 
-                        <di class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline_header">
-                                <p class="timeline__header">September 2017 - June 2024</p>
-                                <h3 class="item-title">Unidad Educativa José María Velaz</h3>
-                                <h5>High School</h5>
+                        <div class="column item-service">
+                            <div class="item-services__content">
+                                <h4 class="item-title">Desarrollo de juegos</h4>
+                                <!--Inicio del parrafo-->
+                                <p>
+                                    Realizacion de video juegos 3D con las mejores herramientas para los usuarios y el
+                                    mejor
+                                    servicion para llevar al exito.
+                                    <!--Fin del parrafo-->
+                                </p>
+                                <!--Fin del Div-->
                             </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, laboriosam. Soluta, fugiat dolorum ex alias beatae odio
-                                     quis ducimus aspernatur perspiciatis accusamus blanditiis reprehenderit suscipit aperiam sapiente cumque vel quibusdam?</p>
+                            <!--Fin del segundo div-->
+                        </div>
+                        <!--Contenedor de la columna que presenta un servicio específico-->
+                        <!--data-aos es un atributo personalizado utilizado para controlar las animaciones de una librería llamada AOS (Animate On Scroll). 
+            AOS es una librería JavaScript que permite animar elementos en una página web cuando estos entran en el área visible del navegador al hacer scroll.-->
+                        <div class="column item-service" data-aos="fade-up">
+                            <!--Contenido del servicio: incluye un título y una descripción-->
+                            <div class="item-service__content">
+                                <!--Título del servicio: desarrollo de maquinas virtuales-->
+                                <h4 class="item-title">especialista en sistemas operativos</h4>
+                                <!--Descripción del servicio: texto de relleno-->
+                                <p>
+                                    Servicio de desarrollo de maquinas virtuales, especialista en el manejo
+                                    del hipervisor VirtualBox con las capacidades especificas para crear maquinas
+                                    de dierentes sistemas operativos.
+                                    <!--Fin del parrafo-->
+                                </p>
+                                <!--Fin del div-->
                             </div>
-                        </di>
-                    </div>
-                </div>
+                        </div>
+                        <!--Repetición de la estructura anterior para otro servicio: seguridad informática-->
+                        <div class="column item-service" data-aos="fade-up">
+                            <div class="item-service__content">
+                                <!--Título del servicio: seguridad informática-->
+                                <h4 class="item-title">Informatica</h4>
+                                <p>
+                                    Campo destacado en cyber seguridad para las informaciones de las empresas
+                                    y servicios de proteccion contra ataques ciberneticos.
+                                    <!--Fin del parrafo-->
+                                </p>
+                                <!--Fin del div uno-->
+                            </div>
+                            <!--Fin del div dos-->
+                        </div>
 
-            </div>
+                        <!--Repetición para un tercer servicio: especialista en IA-->
+                        <div class="column item-service" data-aos="fade-up">
+                            <div class="item-service__content">
+                                <!--Título del servicio: Especialidad en inteligencia Artificial-->
+                                <h4 class="item-title">Inteligencia IA</h4>
+                                <p>
+                                    Experto y destacado en desarrollo de inteligencia artificial para mobiles, vehiculos
+                                    inteligentes, productos del hogar con las mejores herramientas necesarias.
+                                    Destacado por buena experiencia en el manejo de la IA.
+                                    <!--Fin del parrafo-->
+                                </p>
+                                <!--Fin del div-->
+                            </div>
+                            <!--Fin del segundo div-->
+                        </div>
 
-
-        </div><!--end about experience-->
-
-    </section><!-- end s-about-->
-
+                        <!-- Último servicio: Robotica-->
+                        <div class="column item-service" data-aos="fade-up">
+                            <div class="item-service__content">
+                                <!--Título del servicio: Robotica-->
+                                <h4 class="item-title">Robotica</h4>
+                                <p>
+                                    Experiencia en la elaboracion de robotica de alto nivel, capacitado
+                                    para la creacion de distintas maquinas con los mejores servicios.
+                                </p>
+                            </div>
+                        </div><!-- end services-list-->
+                    </div><!--en s-services-->
+                    <!--Fin section-->
+                </section>
 
 
 </body>
